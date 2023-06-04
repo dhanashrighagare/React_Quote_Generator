@@ -1,5 +1,5 @@
 // import axios from 'axios'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, } from 'react'
 import { QuoteContext } from '../ContextAPI/QuoteContext'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +14,7 @@ export default function BookMarkCard(props) {
         
         for(var i=0;i<bookmarks.length;i++)
         {
-            if(bookmarks[i]== quote)
+            if(bookmarks[i]=== quote)
             {
                 index = i
                 console.log(index);

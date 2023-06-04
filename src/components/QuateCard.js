@@ -1,5 +1,5 @@
 // import axios from 'axios'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { QuoteContext } from '../ContextAPI/QuoteContext'
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';

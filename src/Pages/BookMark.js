@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function BookMark() {
   const ctx = useContext(QuoteContext)
+
   return (
     <div>
       <div className=' top h-20 w-screen justify-between flex pt-5 text-white '>
