@@ -4,9 +4,11 @@ import axios from 'axios'
 import  { useContext, useEffect, useState } from 'react'
 import { QuoteContext } from '../ContextAPI/QuoteContext'
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
+import Loading from '../components/Loading'
 
 export default function Home() {
   const ctx = useContext(QuoteContext);
+  const [loading,setloading] = useState(false)
     const [tag,settag] = useState("")
     const bookmarks = ctx.bookmarks
     const [quote,setquote] = useState({
@@ -17,6 +19,7 @@ export default function Home() {
 
     // function for feaching quote
     const fechquote = async()=>{
+        setloading(true)
          await axios({
             url :'https://api.quotable.io/random?tags='+tag,
             method: 'GET'
@@ -35,6 +38,7 @@ export default function Home() {
                 "author":res.data.author,
                 bookmarked:isbookmarked
             }
+            setloading(false)
             console.log(responce);
             setquote(responce)
         })
@@ -76,7 +80,7 @@ const SelectHandler = (e)=>{
         </div>
 
         <div className=' absolute h-full w-screen flex flex-col items-center mt-20 '>
-            <QuateCard  quote={quote}/>
+            {loading?<Loading/>:<QuateCard  quote={quote}/>}
             <div className=' mt-10 mb-10'>
             <select   onChange={SelectHandler} className=' text-black rounded-lg' >
             <option value="" selected="selected"></option>
