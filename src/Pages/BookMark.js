@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useEffect } from 'react'
 import { QuoteContext } from '../ContextAPI/QuoteContext'
 import BookMarkCard from '../components/BookMarkCard'
 import { Link } from 'react-router-dom'
