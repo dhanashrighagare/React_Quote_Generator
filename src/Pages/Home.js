@@ -3,9 +3,8 @@ import QuateCard from '../components/QuateCard'
 import axios from 'axios'
 import  { useContext, useEffect, useState } from 'react'
 import { QuoteContext } from '../ContextAPI/QuoteContext'
-import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import Loading from '../components/Loading'
-
+import { Link } from 'react-router-dom'
 export default function Home() {
   const ctx = useContext(QuoteContext);
   const [loading,setloading] = useState(false)
@@ -70,13 +69,13 @@ const SelectHandler = (e)=>{
     useEffect(()=>{
       fechquote()
       fechtags()
-    },[bookmarks])
+    },[])
 
   return (
     <div className=' h-screen w-screen text-white '>
         <div className=' top h-20 w-screen justify-between flex pt-5 '>
-            <p className=' font-[Poppins] text-xl ml-6 font-extrabold'>Home</p>
-            <p className=' font-[Poppins] text-xl mr-6 font-light'>Book Marks</p>
+            <Link to='/' className=' font-[Poppins] text-xl ml-6 font-extrabold'>Home</Link>
+            <Link to='/bookmarks' className=' font-[Poppins] text-xl mr-6 font-light'>Book Marks</Link>
         </div>
 
         <div className=' absolute h-full w-screen flex flex-col items-center mt-20 '>
