@@ -30,7 +30,7 @@ export default function BookMarkCard(props) {
     }
     
   return (
-    <div className=' relative bg-[#D05252] rounded-[30px] w-[60%] h-auto p-6 flex flex-col justify-center items-center text-white mt-6' >
+    <div className=' relative bg-zinc-700 rounded-[20px] w-[60%] h-auto p-6 flex flex-col justify-center items-center text-white mt-6' >
 
         {quote.quote}
         <br></br>

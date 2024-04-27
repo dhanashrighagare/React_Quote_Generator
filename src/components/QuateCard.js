@@ -12,7 +12,7 @@ export default function QuateCard(props) {
         setisadded(true)
     }
   return (
-    <div className=' relative bg-[#D05252] rounded-[30px] w-[60%] h-auto p-6 flex flex-col justify-center items-center' >
+    <div className=' relative bg-zinc-700 rounded-[20px] w-[60%] h-auto p-6 flex flex-col justify-center items-center' >
 
         {quote.quote}
         <br></br>
